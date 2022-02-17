@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pages>
+    <!--这里的activityName属性填写的值是当前页面的对应的页面类名，可以用用作切换页面，也可以用作断言-->
+    <!--这里因为我找不到，所以暂时都写首页-->
+    <Page activityName=".main.MainActivity" pageDesc = "登陆">
+        <locator by="id" value="com.jingdong.app.mall:id/bqd"  desc="同意协议"></locator>
+        <locator by="XPath" value="/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.TextView[3]"  desc="同意定位"></locator>
+        <locator by="id" value="com.lbe.security.miui:id/permission_allow_onetime_button"  desc="仅在使用中允许定位"></locator>
+        <locator by="XPath" value="//android.view.View[@content-desc='发现']"  desc="进入搜索页面"></locator>
+        <locator by="id" value="com.jd.lib.Discovery.feature:id/dc"  desc="点击搜索"></locator>
+    </Page>
+
+    <Page activityName=".main.MainActivity" pageDesc = "搜索">
+        <locator by="id" value="com.jd.lib.meme.feature:id/id"  desc="点击搜索框"></locator>
+        <locator by="id" value="com.jd.lib.meme.feature:id/id"  desc="输入搜索值"></locator>
+    </Page>
+</Pages>

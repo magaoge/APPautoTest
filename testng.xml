@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/project/AppAutoTest">
+        <classes>
+            <class name="com.appium.cases.LoginCase"></class>
+        </classes>
+    </test>
+    <parameter name="deviceName" value="bf09e850"></parameter>
+    <parameter name="platformName" value="Android"></parameter>
+    <parameter name="appPackage" value="com.jingdong.app.mall"></parameter>
+    <parameter name="appActivity" value=".main.MainActivity"></parameter>
+    <parameter name="applicationName" value="UIAutomator2"></parameter>
+    <parameter name="URL" value="http://127.0.0.1:4723/wd/hub"></parameter>
+
+    <listeners>
+        <!--实现一个监听器，监听用例执行情况-->
+        <listener class-name = "com.appium.report.CustomListener"></listener>
+        <!--reportng报表生成类-->
+        <listener class-name = "org.uncommons.reportng.HTMLReporter"></listener>
+        <!--重试监听类-->
+        <listener class-name = "com.appium.testngretry.RetryListener"></listener>
+    </listeners>
+</suite>
